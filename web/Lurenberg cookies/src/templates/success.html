@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succès</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        p {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+
+        .blinking-text {
+            animation: blink 1s step-start infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .background-image {
+            position: absolute;
+            bottom: 0;
+            width: 20vh;
+            opacity: 0.1; /* Adjust the opacity to your liking */
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blackout Society</h1>
+    <p>We have no state, no homeland</p>  
+    <p>You're either with us or against us</p>
+    <p>We prevail</p>
+    <p class="blinking-text">Going dark for a brighter future</p>
+
+    <img src="./public/images/Blackout.png" alt="Background Image" class="background-image">
+
+    <script>
+        function setRandomBlinking(element) {
+            const minDelay = 0.1;
+            const maxDelay = 0.7;
+            
+            function getRandomDelay() {
+                return (Math.random() * (maxDelay - minDelay) + minDelay).toFixed(2);
+            }
+            
+            function applyRandomDelay() {
+                const randomDelay = getRandomDelay();
+                element.style.animationDuration = `${randomDelay}s`;
+            }
+            
+            applyRandomDelay();
+            setInterval(applyRandomDelay, 1000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const blinkingText = document.querySelector('.blinking-text');
+            setRandomBlinking(blinkingText);
+        });
+    </script>
+</body>
+</html>
