@@ -1,5 +1,5 @@
 
-# pas un bon nom
+# Lurenberg Cookies
 
 > On a trouvé le blog personnel d'un membre de l'organisation, On sait qu'il cache des infos intéressantes dans un dossier flag.txt mais on a pas réussi à accéder au fichier, on nous a dit qu'il adore les cookies typiques de Lurenberg !
 
