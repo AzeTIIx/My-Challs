@@ -8,11 +8,11 @@
 
 En se connectant au challenge, on tombe sur cette page nous demandant de nous identifier :
 
-![](../images/home.jpg)
+![](./home.png)
 
 Après avoir rafraichis la page une fois, nous arrivons sur la page d'accueil.
 
-![](../images/logged.png)
+![](./logged.png)
 
 Par chance nous avons accès au code source, ce qui nous donne de précieuses indications de où commencer à chercher.
 
@@ -180,7 +180,7 @@ Ce script récupère le cookie du challenge pour tenter de le bruteforce en loca
 
 On exécute on retrouve bien le secret.
 
-![](../images/secret.png)
+![](./secret.png)
 
 Maintenant, il ne nous reste plus qu'à forger une requête qui renvoie le contenu de flag.txt vers un webhook et le tour est joué !
 
@@ -247,6 +247,6 @@ if  __name__  ==  '__main__':
 
 On récupère alors le flag directement dans notre webhook : 
 
-![](../images/flag.png)
+![](./flag.png)
 
 ```ECTF{Why_4r3_w3_us1ng_cust0m_s4n1t1z4t10n?}```
