@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Succès</title>
+    <style>
+        body {
+            background-color: black;
+            color: limegreen;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+
+        img {
+            margin-top: 20px;
+            width: 500px; 
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>What do you think you're doing, you silly little government agent</h1>
+    <img id="random-gif" src="" alt="Hacker GIF">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const gifs = [
+                'public/gifs/cat.gif',
+                'public/gifs/cursed.gif',
+                'public/gifs/mario.gif',
+                'public/gifs/peepo.gif',
+                'public/gifs/risitas.gif'
+            ];
+
+            const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
+            document.getElementById('random-gif').src = randomGif;
+        });
+    </script>
+</body>
+</html>
