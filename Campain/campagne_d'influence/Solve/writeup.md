@@ -123,6 +123,6 @@ Nous voici sur le server principal en root qui plus est !
 
 Il ne nous reste plus qu'a récupérer notre flag à et récupérer notre indice pour désamorcer la bombe :D
 
-![](./main_serv.png)
+![](./the_end.png)
 
 ```FLAG : ECTF{b3w4r3_0f_p4ss1ng_tr41n}```
