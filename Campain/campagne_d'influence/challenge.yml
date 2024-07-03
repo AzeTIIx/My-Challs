@@ -1,0 +1,47 @@
+# This file represents the base specification of your challenge. It is used by
+# other tools to install and deploy your challenge.
+
+# Required sections
+name: "Campagne d'influence"
+author: "AzeTIx"
+category: "Campain"
+description: "La société nationale des transports listembourgeois nous a contacté, l'intégralité de leurs panneaux
+publicitaires on été piratés et ils ne savent pas comment !
+
+Ils avaient pourtant bien sécurisé leur serveur principal avec une connexion SSH robuste.
+
+Tentez de reproduire l'attaque menée par la blackout society, tout ce que vous a fournis la SNTL, c'est ce endpoint de panneau publicitaire :
+
+https://esaipctf:8080
+
+
+**Author: AzeTIx**"
+#TODO : change adress
+value: 500
+type: dynamic
+
+# The extra field provides additional fields for data during the install/sync commands/
+# Fields in extra can be used to supply additional information for other challenge types
+# For example the follow extra field is for dynamic challenges. To use these following
+# extra fields, set the type to "dynamic" and uncomment the "extra" section below
+extra:
+    initial: 500
+    decay: 30
+    minimum: 100
+
+# Flags specify answers that your challenge use. You should generally provide at least one.
+# Can be removed if unused
+# Accepts strings or dictionaries of CTFd API data
+flags:
+    # A static case sensitive flag
+    - ECTF{b3w4r3_0f_p4ss1ng_tr41n}
+
+# Tags are used to provide additional public tagging to a challenge
+# Can be removed if unused
+# Accepts strings
+tags:
+    - moyen
+    - web
+    - système
+    - misc
+

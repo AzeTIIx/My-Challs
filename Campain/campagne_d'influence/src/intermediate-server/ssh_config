@@ -1,0 +1,4 @@
+Host *
+    HashKnownHosts no
+    SendEnv LANG LC_*
+    GSSAPIAuthentication yes

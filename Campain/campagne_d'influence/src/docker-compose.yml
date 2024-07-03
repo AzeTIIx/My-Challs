@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  main-server:
+    build: ./main-server
+    ports:
+      - "2222:22"
+    volumes:
+      - ./main-server/media:/usr/src/app/media
+      - shared-data:/remote-ssh-keys
+    networks:
+      - ctf-network
+    depends_on:
+      - intermediate-server
+
+  intermediate-server:
+    build: ./intermediate-server
+    ports:
+      - "8001:3000"
+    volumes:
+      - shared-data:/root/.ssh
+    networks:
+      - ctf-network
+
+  advertising-panel:
+    build: ./advertising-panel
+    ports:
+      - "8080:80"
+    depends_on:
+      - intermediate-server
+    networks:
+      - ctf-network
+
+
+volumes:
+  shared-data:
+
+networks:
+  ctf-network:
+    driver: bridge

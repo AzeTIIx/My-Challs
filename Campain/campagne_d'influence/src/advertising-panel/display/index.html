@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Advertising Panel</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: black; 
+        }
+
+        #advertVideo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!--CHANGER ADRESSE IP APRES INSTALL DE L'INFRA-->
+    <video id="advertVideo" src="http://localhost:8001/latest-media" autoplay muted loop></video>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            let videoElement = document.getElementById('advertVideo');
+            videoElement.play();
+        });
+    </script>
+</body>
+</html>
